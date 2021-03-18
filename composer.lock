@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53142216366053d8907d0b362c591e05",
+    "content-hash": "3321b2ebc2f684402a0ebc4d7688e016",
     "packages": [
         {
             "name": "akeneo/batch-bundle",
@@ -135,56 +135,6 @@
                 "source": "https://github.com/aschamberger/XmlSecurity"
             },
             "time": "2015-05-31T10:10:35+00:00"
-        },
-        {
-            "name": "authorizenet/authorizenet",
-            "version": "1.9.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AuthorizeNet/sdk-php.git",
-                "reference": "31bb167baeec86eb87908e40db58a3de0eba406f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AuthorizeNet/sdk-php/zipball/31bb167baeec86eb87908e40db58a3de0eba406f",
-                "reference": "31bb167baeec86eb87908e40db58a3de0eba406f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-simplexml": "*",
-                "ext-xmlwriter": "*",
-                "goetas-webservices/xsd2php-runtime": "^0.2.2",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpmd/phpmd": "~2.0",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "lib"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Official PHP SDK for Authorize.Net",
-            "homepage": "http://developer.authorize.net",
-            "keywords": [
-                "authorize.net",
-                "authorizenet",
-                "ecommerce",
-                "payment"
-            ],
-            "support": {
-                "issues": "https://github.com/AuthorizeNet/sdk-php/issues",
-                "source": "https://github.com/AuthorizeNet/sdk-php/tree/1.9.9"
-            },
-            "time": "2018-12-05T10:34:25+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -2542,54 +2492,6 @@
             "time": "2020-11-24T19:55:57+00:00"
         },
         {
-            "name": "drewm/mailchimp-api",
-            "version": "v2.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drewm/mailchimp-api.git",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drewm/mailchimp-api/zipball/c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "reference": "c6cdfab4ca6ddbc3b260913470bd0a4a5cb84c7a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "7.0.*",
-                "vlucas/phpdotenv": "^2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DrewM\\MailChimp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Drew McLellan",
-                    "email": "drew.mclellan@gmail.com",
-                    "homepage": "http://allinthehead.com/"
-                }
-            ],
-            "description": "Super-simple, minimum abstraction MailChimp API v3 wrapper",
-            "homepage": "https://github.com/drewm/mailchimp-api",
-            "support": {
-                "issues": "https://github.com/drewm/mailchimp-api/issues",
-                "source": "https://github.com/drewm/mailchimp-api/tree/master"
-            },
-            "time": "2019-08-06T09:24:58+00:00"
-        },
-        {
             "name": "egulias/email-validator",
             "version": "2.1.25",
             "source": {
@@ -3030,66 +2932,6 @@
                 "wiki": "https://github.com/Atlantic18/DoctrineExtensions/tree/main/doc"
             },
             "time": "2021-01-23T23:40:14+00:00"
-        },
-        {
-            "name": "goetas-webservices/xsd2php-runtime",
-            "version": "v0.2.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/goetas-webservices/xsd2php-runtime.git",
-                "reference": "5c0927c0836c0146637ea9a73815b247ae46d4f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/goetas-webservices/xsd2php-runtime/zipball/5c0927c0836c0146637ea9a73815b247ae46d4f6",
-                "reference": "5c0927c0836c0146637ea9a73815b247ae46d4f6",
-                "shasum": ""
-            },
-            "require": {
-                "jms/serializer": "^1.2|^2.0|^3.0",
-                "php": "^7.1",
-                "symfony/yaml": "^2.2|^3.0|^4.0|^5.0"
-            },
-            "conflict": {
-                "jms/serializer": "1.4.1|1.6.1|1.6.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.0|^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GoetasWebservices\\Xsd\\XsdToPhpRuntime\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Asmir Mustafic"
-                }
-            ],
-            "description": "Convert XSD  (XML Schema) definitions into PHP classes",
-            "keywords": [
-                "converter",
-                "jms",
-                "php",
-                "serializer",
-                "xml",
-                "xsd"
-            ],
-            "support": {
-                "issues": "https://github.com/goetas-webservices/xsd2php-runtime/issues",
-                "source": "https://github.com/goetas-webservices/xsd2php-runtime/tree/v0.2.13"
-            },
-            "time": "2020-09-10T09:47:07+00:00"
         },
         {
             "name": "gos/pubsub-router-bundle",
@@ -3849,61 +3691,6 @@
                 "source": "https://github.com/Incenteev/ParameterHandler/tree/v2.1.4"
             },
             "time": "2020-03-17T21:10:00+00:00"
-        },
-        {
-            "name": "jean85/pretty-package-versions",
-            "version": "1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "a917488320c20057da87f67d0d40543dd9427f7a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/a917488320c20057da87f67d0d40543dd9427f7a",
-                "reference": "a917488320c20057da87f67d0d40543dd9427f7a",
-                "shasum": ""
-            },
-            "require": {
-                "composer/package-versions-deprecated": "^1.8.0",
-                "php": "^7.0|^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.0|^8.5|^9.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Jean85\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alessandro Lai",
-                    "email": "alessandro.lai85@gmail.com"
-                }
-            ],
-            "description": "A wrapper for ocramius/package-versions to get pretty versions strings",
-            "keywords": [
-                "composer",
-                "package",
-                "release",
-                "versions"
-            ],
-            "support": {
-                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/1.5.1"
-            },
-            "time": "2020-09-14T08:43:34+00:00"
         },
         {
             "name": "jms/metadata",
@@ -5698,74 +5485,6 @@
             "time": "2019-12-02T02:32:27+00:00"
         },
         {
-            "name": "mongodb/mongodb",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "953dbc19443aa9314c44b7217a16873347e6840d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/953dbc19443aa9314c44b7217a16873347e6840d",
-                "reference": "953dbc19443aa9314c44b7217a16873347e6840d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.8.1",
-                "jean85/pretty-package-versions": "^1.2",
-                "php": "^7.0 || ^8.0",
-                "symfony/polyfill-php80": "^1.19"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "^3.5, <3.5.5",
-                "symfony/phpunit-bridge": "5.x-dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Braun",
-                    "email": "andreas.braun@mongodb.com"
-                },
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/mongodb/mongo-php-library/issues",
-                "source": "https://github.com/mongodb/mongo-php-library/tree/1.8.0"
-            },
-            "time": "2020-11-25T12:26:02+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.26.0",
             "source": {
@@ -6458,11 +6177,17 @@
         },
         {
             "name": "oro/calendar-bundle",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCalendarBundle.git",
+                "reference": "02b399094bdabe39589b795f73e7e395267d91ce"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/calendar",
-                "reference": "e8c1b0881d4bf85bd58f4d1834b9ac9208475664"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCalendarBundle/zipball/02b399094bdabe39589b795f73e7e395267d91ce",
+                "reference": "02b399094bdabe39589b795f73e7e395267d91ce",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "4.2.*"
@@ -6501,17 +6226,25 @@
                 "OroCRM",
                 "OroPlatform"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCalendarBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroCalendarBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/commerce",
-            "version": "dev-master",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/orocommerce.git",
+                "reference": "a5e3d5508579c79803c5fc2e25abb6b90000e6ad"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/commerce",
-                "reference": "0cccb8a2cd7038b139c11f569d686932cab773c9"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/orocommerce/zipball/a5e3d5508579c79803c5fc2e25abb6b90000e6ad",
+                "reference": "a5e3d5508579c79803c5fc2e25abb6b90000e6ad",
+                "shasum": ""
             },
             "require": {
                 "besimple/soap-client": "^0.2.6",
@@ -6630,58 +6363,25 @@
             ],
             "description": "OroCommerce - an open-source Business to Business Commerce application. \\nThis package contains bundles and needs to be added as a dependency in an OroCommerce application.",
             "homepage": "https://github.com/orocommerce/orocommerce",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-authorizenet",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/authorizenet",
-                "reference": "6587e085bcb186da04bc40f608a157feb42e40bd"
+            "support": {
+                "source": "https://github.com/oroinc/orocommerce/tree/4.2",
+                "issues": "https://github.com/oroinc/orocommerce/issues"
             },
-            "require": {
-                "authorizenet/authorizenet": "~1.9.2",
-                "oro/commerce": "4.2.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\AuthorizeNetBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "https://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce Authorize.Net integration",
-            "homepage": "https://github.com/orocommerce/OroAuthorizeNetBundle.git",
-            "transport-options": {
-                "relative": true
-            }
+            "time": "2021-02-02T10:09:03+00:00"
         },
         {
             "name": "oro/commerce-crm",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/orocommerce-orocrm.git",
+                "reference": "4aa6531fd5e6b8fca348a0aa36d13e52a81ddce5"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/commerce-crm",
-                "reference": "fd3870717664ac2d035fff332571a911d73bdc09"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/orocommerce-orocrm/zipball/4aa6531fd5e6b8fca348a0aa36d13e52a81ddce5",
+                "reference": "4aa6531fd5e6b8fca348a0aa36d13e52a81ddce5",
+                "shasum": ""
             },
             "require": {
                 "oro/commerce": "4.2.*",
@@ -6717,103 +6417,24 @@
             ],
             "description": "OroCRM integration for OroCommerce",
             "homepage": "https://github.com/orocommerce/orocommerce-orocrm",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-demo-checkouts",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/commerce-demo-checkouts",
-                "reference": "23c25be9ca06c1584481ffe3d1bab1eb0aac2bc5"
+            "support": {
+                "source": "https://github.com/oroinc/orocommerce-orocrm/tree/4.2"
             },
-            "require": {
-                "oro/commerce": "4.2.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\AlternativeCheckoutBundle\\": "src/Oro/Bundle/AlternativeCheckoutBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "https://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce checkout customization examples",
-            "homepage": "https://github.com/oroinc/commerce-demo-checkouts",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/commerce-infinitepay",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/infinitepay",
-                "reference": "3131e73ce018270fd95fcbb96a83c2d7d22374dc"
-            },
-            "require": {
-                "besimple/soap-client": "^0.2.6",
-                "oro/commerce": "4.2.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\InfinitePayBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocommerce.com"
-                }
-            ],
-            "description": "OroCommerce InfinitePay Integration",
-            "homepage": "https://github.com/orocommerce/OroInfinitePayBundle.git",
-            "keywords": [
-                "InfinitePay",
-                "Integration",
-                "Oro"
-            ],
-            "transport-options": {
-                "relative": true
-            }
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/cookie-consent",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/cookie-consent.git",
+                "reference": "e80463e8d040027e938d0a07897adf996a168478"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/cookie-consent",
-                "reference": "4a1eeecaf1172b6365b51d86d252f4bf86c7f6e1"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/cookie-consent/zipball/e80463e8d040027e938d0a07897adf996a168478",
+                "reference": "e80463e8d040027e938d0a07897adf996a168478",
+                "shasum": ""
             },
             "require": {
                 "oro/commerce": "4.2.*"
@@ -6849,17 +6470,25 @@
                 "Cookie",
                 "Oro"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/cookie-consent/tree/4.2",
+                "issues": "https://github.com/oroinc/cookie-consent/issues"
+            },
+            "time": "2021-01-28T19:11:20+00:00"
         },
         {
             "name": "oro/crm",
-            "version": "dev-master",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/crm.git",
+                "reference": "d96c69ffa9c9390b0ca61169371c43e169ec5656"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/crm",
-                "reference": "7d1beb3fdbc9285d47394a915a754780b8c9bb42"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/crm/zipball/d96c69ffa9c9390b0ca61169371c43e169ec5656",
+                "reference": "d96c69ffa9c9390b0ca61169371c43e169ec5656",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "4.2.*",
@@ -6938,17 +6567,25 @@
             ],
             "description": "OroCRM",
             "homepage": "https://github.com/oroinc/crm.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/crm/tree/4.2",
+                "issues": "https://github.com/oroinc/crm/issues"
+            },
+            "time": "2021-01-30T17:05:19+00:00"
         },
         {
             "name": "oro/crm-call-bundle",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMCallBundle.git",
+                "reference": "7ed502b6c2c4c688410ae553318065cc21aee77f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/call",
-                "reference": "a76f5687d6bd464946f72b03a9c997452c65dff7"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMCallBundle/zipball/7ed502b6c2c4c688410ae553318065cc21aee77f",
+                "reference": "7ed502b6c2c4c688410ae553318065cc21aee77f",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "4.2.*"
@@ -6982,17 +6619,25 @@
                 "Call",
                 "Oro"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMCallBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroCRMCallBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/crm-dotmailer",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
+                "reference": "43b7234c3b93c831c878a23cd4b328fac95ea32d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/dotmailer",
-                "reference": "f4c3339a01e73c79c50de1a27b66742c5ee7fa64"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMDotmailerBundle/zipball/43b7234c3b93c831c878a23cd4b328fac95ea32d",
+                "reference": "43b7234c3b93c831c878a23cd4b328fac95ea32d",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -7025,17 +6670,25 @@
             ],
             "description": "Oro Dotmailer integration",
             "homepage": "https://github.com/oroinc/OroCRMDotmailerBundle.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMDotmailerBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroCRMDotmailerBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/crm-hangouts-call-bundle",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMHangoutsCallBundle.git",
+                "reference": "8227ed631412db70346e3c344634f284889533d1"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/google-hangout",
-                "reference": "ba98cebe5cf2ef856298a959f8e8f4924dbe50eb"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMHangoutsCallBundle/zipball/8227ed631412db70346e3c344634f284889533d1",
+                "reference": "8227ed631412db70346e3c344634f284889533d1",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "4.2.*",
@@ -7072,17 +6725,25 @@
                 "Oro",
                 "integration"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMHangoutsCallBundle/tree/4.2-alpha.3",
+                "issues": "https://github.com/oroinc/OroCRMHangoutsCallBundle/issues"
+            },
+            "time": "2020-05-21T02:17:23+00:00"
         },
         {
             "name": "oro/crm-task-bundle",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMTaskBundle.git",
+                "reference": "32fd1b25b549ab2e82c53a0059d023a01e042a93"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/task",
-                "reference": "0c00b22b72aa1644e9703ee3fd48f1aa06b0ff36"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMTaskBundle/zipball/32fd1b25b549ab2e82c53a0059d023a01e042a93",
+                "reference": "32fd1b25b549ab2e82c53a0059d023a01e042a93",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "4.2.*"
@@ -7116,17 +6777,25 @@
                 "Oro",
                 "Task"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMTaskBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroCRMTaskBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/crm-zendesk",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMZendeskBundle.git",
+                "reference": "77f6cf4ab9602b8cee326db1c46e847c0242fe48"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/zendesk",
-                "reference": "becb0cbc3157f61c6a5da85c2b35348eda023569"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMZendeskBundle/zipball/77f6cf4ab9602b8cee326db1c46e847c0242fe48",
+                "reference": "77f6cf4ab9602b8cee326db1c46e847c0242fe48",
+                "shasum": ""
             },
             "require": {
                 "oro/crm": "4.2.*"
@@ -7161,17 +6830,25 @@
                 "Oro",
                 "Zendesk"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMZendeskBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroCRMZendeskBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/customer-portal",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/customer-portal.git",
+                "reference": "e3894bce66974a05c1097f283fc06565dd5d671b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/customer-portal",
-                "reference": "451e4463f5898a9f953cb9e57b55b96592e97082"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/customer-portal/zipball/e3894bce66974a05c1097f283fc06565dd5d671b",
+                "reference": "e3894bce66974a05c1097f283fc06565dd5d671b",
+                "shasum": ""
             },
             "require": {
                 "oro/calendar-bundle": "4.2.*",
@@ -7213,9 +6890,11 @@
                 }
             ],
             "homepage": "https://github.com/oroinc/customer-portal",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/customer-portal/tree/4.2",
+                "issues": "https://github.com/oroinc/customer-portal/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -7276,157 +6955,18 @@
             "time": "2021-01-13T00:49:29+00:00"
         },
         {
-            "name": "oro/google-tag-manager-bundle",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/google-tag-manager",
-                "reference": "17af80448da1b00a0dd279bc9a9f97b508a6ed05"
-            },
-            "require": {
-                "oro/commerce": "4.2.*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\GoogleTagManagerBundle\\": "src/Oro/Bundle/GoogleTagManagerBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.oroinc.com"
-                }
-            ],
-            "description": "Oro Google Tag Manager integration",
-            "homepage": "https://github.com/oroinc/google-tag-manager-bundle",
-            "keywords": [
-                "Google",
-                "Integration",
-                "Manager",
-                "Oro",
-                "Tag"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/gridfs-config",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/gridfs-config",
-                "reference": "680376c9108da1ac023610d0f04ec7794cc19012"
-            },
-            "require": {
-                "ext-mongodb": "*",
-                "knplabs/knp-gaufrette-bundle": "~0.7.1",
-                "mongodb/mongodb": "^1.1",
-                "oro/platform": "4.2.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~9.5.1"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\GridFSConfigBundle\\": "src/Oro/Bundle/GridFSConfigBundle"
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://oroinc.com"
-                }
-            ],
-            "description": "GridFS adapter configuration for Gaufrette",
-            "homepage": "https://github.com/oroinc/gridfs-config",
-            "keywords": [
-                "GridFS",
-                "Mongo",
-                "MongoDB",
-                "Oro",
-                "OroPlatform"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/mailchimp",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../package/mailchimp",
-                "reference": "18ac3edcfefd483059683bd5b57a7acdaed3a981"
-            },
-            "require": {
-                "drewm/mailchimp-api": "^2.5",
-                "oro/crm": "4.2.*",
-                "oro/marketing": "4.2.*"
-            },
-            "conflict": {
-                "oro/crm-mail-chimp": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Oro\\Bundle\\MailChimpBundle\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "license": [
-                "OSL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.oroinc.com"
-                }
-            ],
-            "description": "Oro MailChimp integration",
-            "homepage": "https://github.com/oroinc/OroMailChimpBundle.git",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "oro/marketing",
-            "version": "dev-master",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroCRMMarketingBundle.git",
+                "reference": "cf0d1d556ec2192e0fb69c87913644441d10e56a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/marketing",
-                "reference": "b6a2b9721fa9aeb6174e0bf9730b036d60d6571d"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroCRMMarketingBundle/zipball/cf0d1d556ec2192e0fb69c87913644441d10e56a",
+                "reference": "cf0d1d556ec2192e0fb69c87913644441d10e56a",
+                "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
@@ -7466,17 +7006,24 @@
                 "Oro",
                 "Tracking"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroCRMMarketingBundle/tree/4.2"
+            },
+            "time": "2021-02-02T10:07:02+00:00"
         },
         {
             "name": "oro/oauth2-server",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/oauth2-server.git",
+                "reference": "cc5cef41f2bd5a4d1d644553d17d9efd52b7d357"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/oauth2-server",
-                "reference": "85ff2c6da0f76fc1750f4c6c4f991fd1ac5f6b54"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/oauth2-server/zipball/cc5cef41f2bd5a4d1d644553d17d9efd52b7d357",
+                "reference": "cc5cef41f2bd5a4d1d644553d17d9efd52b7d357",
+                "shasum": ""
             },
             "require": {
                 "league/oauth2-server": "8.2.*",
@@ -7513,17 +7060,25 @@
                 "OAuth2",
                 "ORO"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/oauth2-server/tree/4.2",
+                "issues": "https://github.com/oroinc/oauth2-server/issues"
+            },
+            "time": "2021-01-28T19:11:20+00:00"
         },
         {
             "name": "oro/platform",
-            "version": "dev-master",
+            "version": "4.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/platform.git",
+                "reference": "a5bb0b083c574da1216c73bd57ebc2f5f9318e55"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/platform",
-                "reference": "9f35dadb5ea3ebd4a33fc443e7d18b1a7e0a1f6a"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/platform/zipball/a5bb0b083c574da1216c73bd57ebc2f5f9318e55",
+                "reference": "a5bb0b083c574da1216c73bd57ebc2f5f9318e55",
+                "shasum": ""
             },
             "require": {
                 "akeneo/batch-bundle": "0.4.14",
@@ -7836,17 +7391,25 @@
             ],
             "description": "Business Application Platform (BAP)",
             "homepage": "https://github.com/oroinc/platform.git",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/platform/tree/4.2",
+                "issues": "https://github.com/oroinc/platform/issues"
+            },
+            "time": "2021-02-02T10:29:02+00:00"
         },
         {
             "name": "oro/platform-serialised-fields",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/OroEntitySerializedFieldsBundle.git",
+                "reference": "5365ecdb12e4f0a10a10aa380e192f6dabe750ec"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/serialized-fields",
-                "reference": "b952b1ed48b7e5b2ba355a6335b1e55ffb681257"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/OroEntitySerializedFieldsBundle/zipball/5365ecdb12e4f0a10a10aa380e192f6dabe750ec",
+                "reference": "5365ecdb12e4f0a10a10aa380e192f6dabe750ec",
+                "shasum": ""
             },
             "require": {
                 "oro/platform": "4.2.*"
@@ -7882,17 +7445,25 @@
                 "entity",
                 "fields"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/tree/4.2",
+                "issues": "https://github.com/oroinc/OroEntitySerializedFieldsBundle/issues"
+            },
+            "time": "2021-01-29T04:34:44+00:00"
         },
         {
             "name": "oro/redis-config",
-            "version": "dev-master",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/redis-config.git",
+                "reference": "0f869084cb85a816b2356b8062fb99938060588c"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/redis-config",
-                "reference": "a713bd1b4c5d88738ef43b757d6c0719b90816ec"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/redis-config/zipball/0f869084cb85a816b2356b8062fb99938060588c",
+                "reference": "0f869084cb85a816b2356b8062fb99938060588c",
+                "shasum": ""
             },
             "require": {
                 "predis/predis": "~1.1.6",
@@ -7927,9 +7498,11 @@
                 "OroPlatform",
                 "Redis"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/redis-config/tree/4.2",
+                "issues": "https://github.com/oroinc/redis-config/issues"
+            },
+            "time": "2021-01-28T19:11:20+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -8354,16 +7927,16 @@
         },
         {
             "name": "php-http/message",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message.git",
-                "reference": "39db36d5972e9e6d00ea852b650953f928d8f10d"
+                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message/zipball/39db36d5972e9e6d00ea852b650953f928d8f10d",
-                "reference": "39db36d5972e9e6d00ea852b650953f928d8f10d",
+                "url": "https://api.github.com/repos/php-http/message/zipball/fb0dbce7355cad4f4f6a225f537c34d013571f29",
+                "reference": "fb0dbce7355cad4f4f6a225f537c34d013571f29",
                 "shasum": ""
             },
             "require": {
@@ -8379,15 +7952,15 @@
                 "ergebnis/composer-normalize": "^2.6",
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^1.0",
+                "laminas/laminas-diactoros": "^2.0",
                 "phpspec/phpspec": "^5.1 || ^6.3",
-                "slim/slim": "^3.0",
-                "zendframework/zend-diactoros": "^1.0"
+                "slim/slim": "^3.0"
             },
             "suggest": {
                 "ext-zlib": "Used with compressor/decompressor streams",
                 "guzzlehttp/psr7": "Used with Guzzle PSR-7 Factories",
-                "slim/slim": "Used with Slim Framework PSR-7 implementation",
-                "zendframework/zend-diactoros": "Used with Diactoros Factories"
+                "laminas/laminas-diactoros": "Used with Diactoros Factories",
+                "slim/slim": "Used with Slim Framework PSR-7 implementation"
             },
             "type": "library",
             "extra": {
@@ -8422,9 +7995,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message/issues",
-                "source": "https://github.com/php-http/message/tree/1.10.0"
+                "source": "https://github.com/php-http/message/tree/1.11.0"
             },
-            "time": "2020-11-11T10:19:56+00:00"
+            "time": "2021-02-01T08:54:58+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -9399,16 +8972,16 @@
         },
         {
             "name": "react/cache",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
-                "reference": "44a568925556b0bd8cacc7b49fb0f1cf0d706a0c"
+                "reference": "4bf736a2cccec7298bdf745db77585966fc2ca7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/44a568925556b0bd8cacc7b49fb0f1cf0d706a0c",
-                "reference": "44a568925556b0bd8cacc7b49fb0f1cf0d706a0c",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/4bf736a2cccec7298bdf745db77585966fc2ca7e",
+                "reference": "4bf736a2cccec7298bdf745db77585966fc2ca7e",
                 "shasum": ""
             },
             "require": {
@@ -9459,7 +9032,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/cache/issues",
-                "source": "https://github.com/reactphp/cache/tree/v1.1.0"
+                "source": "https://github.com/reactphp/cache/tree/v1.1.1"
             },
             "funding": [
                 {
@@ -9471,7 +9044,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-18T12:12:35+00:00"
+            "time": "2021-02-02T06:47:52+00:00"
         },
         {
             "name": "react/dns",
@@ -16446,123 +16019,18 @@
             "time": "2020-12-20T10:01:03+00:00"
         },
         {
-            "name": "oro/commerce-documentation-examples",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../documentation/code_examples/commerce",
-                "reference": "cec67692837e6a506adce70f21e85ba8addb7ea0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ACME\\Bundle\\CollectOnDeliveryBundle\\": "payment_method/collect-on-delivery/",
-                    "ACME\\Bundle\\FastShippingBundle\\": "shipping_method/fast-shipping/",
-                    "ACME\\Bundle\\CopyrightBundle\\": "content_widget/copyright/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCommerce documentation examples",
-            "keywords": [
-                "OroCommerce",
-                "documentation",
-                "example"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/crm-documentation-examples",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../documentation/code_examples/crm",
-                "reference": "ebe36dc75008d54de82699566f96af8b7dd37698"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroCRM documentation examples",
-            "keywords": [
-                "OroCRM",
-                "documentation",
-                "example"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "oro/platform-documentation-examples",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../documentation/code_examples/platform",
-                "reference": "42292227ea33b0fa1a2144da5ac8208789cc8506"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ACME\\Bundle\\DemoBundle\\": "image_placeholder/demo/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oro, Inc",
-                    "homepage": "http://www.orocrm.com"
-                }
-            ],
-            "description": "OroPlatform documentation examples",
-            "keywords": [
-                "OroPlatform",
-                "documentation",
-                "example"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "oro/twig-inspector",
-            "version": "dev-master",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oroinc/twig-inspector.git",
+                "reference": "a6bfa95e3909fba2f7ee411b4a5ac6b373490e2f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../package/twig-inspector",
-                "reference": "bd6f6a6e6adfd03686d1c7ef71b5359981f73553"
+                "type": "zip",
+                "url": "https://api.github.com/repos/oroinc/twig-inspector/zipball/a6bfa95e3909fba2f7ee411b4a5ac6b373490e2f",
+                "reference": "a6bfa95e3909fba2f7ee411b4a5ac6b373490e2f",
+                "shasum": ""
             },
             "require": {
                 "symfony/config": "^4.4.1 | ^5.0",
@@ -16604,9 +16072,11 @@
                 "toolbar-extension",
                 "twig"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/oroinc/twig-inspector/tree/master",
+                "issues": "https://github.com/oroinc/twig-inspector/issues"
+            },
+            "time": "2020-05-13T09:34:30+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -17293,16 +16763,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.1",
+            "version": "9.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e7bdf4085de85a825f4424eae52c99a1cec2f360"
+                "reference": "f661659747f2f87f9e72095bb207bceb0f151cb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e7bdf4085de85a825f4424eae52c99a1cec2f360",
-                "reference": "e7bdf4085de85a825f4424eae52c99a1cec2f360",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f661659747f2f87f9e72095bb207bceb0f151cb4",
+                "reference": "f661659747f2f87f9e72095bb207bceb0f151cb4",
                 "shasum": ""
             },
             "require": {
@@ -17380,7 +16850,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.1"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.2"
             },
             "funding": [
                 {
@@ -17392,7 +16862,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-17T07:42:25+00:00"
+            "time": "2021-02-02T14:45:58+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -19052,33 +18522,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "oro/commerce": 20,
-        "oro/commerce-authorizenet": 20,
-        "oro/platform": 20,
-        "oro/platform-serialised-fields": 20,
-        "oro/oauth2-server": 20,
-        "oro/calendar-bundle": 20,
-        "oro/marketing": 20,
-        "oro/customer-portal": 20,
-        "oro/crm": 20,
-        "oro/crm-task-bundle": 20,
-        "oro/crm-call-bundle": 20,
-        "oro/commerce-crm": 20,
-        "oro/crm-hangouts-call-bundle": 20,
-        "oro/crm-dotmailer": 20,
-        "oro/crm-zendesk": 20,
-        "oro/commerce-infinitepay": 20,
-        "oro/redis-config": 20,
-        "oro/google-tag-manager-bundle": 20,
-        "oro/mailchimp": 20,
-        "oro/cookie-consent": 20,
-        "oro/gridfs-config": 20,
-        "oro/commerce-demo-checkouts": 20,
-        "oro/commerce-documentation-examples": 20,
-        "oro/crm-documentation-examples": 20,
-        "oro/platform-documentation-examples": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

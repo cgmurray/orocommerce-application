@@ -8,8 +8,14 @@ require_once __DIR__ . '/../var/SymfonyRequirements.php';
 
 use Oro\Bundle\AssetBundle\NodeJsExecutableFinder;
 use Oro\Bundle\AssetBundle\NodeJsVersionChecker;
+use Oro\Bundle\AttachmentBundle\Exception\ProcessorsException;
+use Oro\Bundle\AttachmentBundle\Exception\ProcessorsVersionException;
+use Oro\Bundle\AttachmentBundle\ProcessorHelper;
+use Oro\Bundle\AttachmentBundle\ProcessorVersionChecker;
+use Oro\Component\DoctrineUtils\DBAL\DbPrivilegesProvider;
 use Oro\Component\PhpUtils\ArrayUtil;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\Intl\Intl;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Yaml\Yaml;
@@ -19,7 +25,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 class OroRequirements extends SymfonyRequirements
 {
-    const REQUIRED_PHP_VERSION  = '7.3.13';
+    const REQUIRED_PHP_VERSION  = '7.4.14';
     const REQUIRED_GD_VERSION   = '2.0';
     const REQUIRED_CURL_VERSION = '7.0';
     const REQUIRED_NODEJS_VERSION  = '>=12.0';
@@ -234,11 +240,6 @@ class OroRequirements extends SymfonyRequirements
         );
 
         $this->addOroRequirement(
-            is_writable($baseDir . '/public/uploads'),
-            'public/uploads/ directory must be writable',
-            'Change the permissions of the "<strong>public/uploads/</strong>" directory so that the web server can write into it.'
-        );
-        $this->addOroRequirement(
             is_writable($baseDir . '/public/media'),
             'public/media/ directory must be writable',
             'Change the permissions of the "<strong>public/media/</strong>" directory so that the web server can write into it.'
@@ -249,39 +250,16 @@ class OroRequirements extends SymfonyRequirements
             'Change the permissions of the "<strong>public/bundles/</strong>" directory so that the web server can write into it.'
         );
         $this->addOroRequirement(
-            is_writable($baseDir . '/var/attachment'),
-            'var/attachment/ directory must be writable',
-            'Change the permissions of the "<strong>var/attachment/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/var/data'),
+            'var/data/ directory must be writable',
+            'Change the permissions of the "<strong>var/data/</strong>" directory so that the web server can write into it.'
         );
+
         $this->addOroRequirement(
-            is_writable($baseDir . '/var/import_export'),
-            'var/import_export/ directory must be writable',
-            'Change the permissions of the "<strong>var/import_export/</strong>" directory so that the web server can write into it.'
+            is_writable($baseDir . '/public/js'),
+            'public/js directory must be writable',
+            'Change the permissions of the "<strong>public/js</strong>" directory so that the web server can write into it.'
         );
-
-        if (is_dir($baseDir . '/public/js')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public/js'),
-                'public/js directory must be writable',
-                'Change the permissions of the "<strong>public/js</strong>" directory so that the web server can write into it.'
-            );
-        }
-
-        if (is_dir($baseDir . '/public/css')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public/css'),
-                'public/css directory must be writable',
-                'Change the permissions of the "<strong>public/css</strong>" directory so that the web server can write into it.'
-            );
-        }
-
-        if (!is_dir($baseDir . '/public/css') || !is_dir($baseDir . '/public/js')) {
-            $this->addOroRequirement(
-                is_writable($baseDir . '/public'),
-                'public directory must be writable',
-                'Change the permissions of the "<strong>public</strong>" directory so that the web server can write into it.'
-            );
-        }
 
         if (is_file($baseDir . '/config/parameters.yml')) {
             $this->addOroRequirement(
@@ -291,17 +269,68 @@ class OroRequirements extends SymfonyRequirements
             );
         }
 
+        // Check database configuration
         $configYmlPath = $baseDir . '/config/config_' . $env . '.yml';
         if (is_file($configYmlPath)) {
             $config = $this->getParameters($configYmlPath);
             $pdo = $this->getDatabaseConnection($config);
             if ($pdo) {
+                $requiredPrivileges = ['INSERT', 'SELECT', 'UPDATE', 'DELETE', 'TRUNCATE', 'REFERENCES', 'TRIGGER', 'CREATE', 'DROP'];
+                $notGrantedPrivileges = $this->getNotGrantedPrivileges($pdo, $requiredPrivileges, $config);
+                $this->addOroRequirement(
+                    empty($notGrantedPrivileges),
+                    sprintf('%s database privileges must be granted', implode(', ', $requiredPrivileges)),
+                    sprintf('Grant %s privileges on database "%s" to user "%s"', implode(', ', $notGrantedPrivileges), $config['database_name'], $config['database_user'])
+                );
                 $this->addOroRequirement(
                     $this->isUuidSqlFunctionPresent($pdo),
                     'UUID SQL function must be present',
                     'Execute "<strong>CREATE EXTENSION IF NOT EXISTS "uuid-ossp";</strong>" SQL command so UUID-OSSP extension will be installed for database.'
                 );
             }
+
+            $this->addProcessorsRequirements(ProcessorHelper::JPEGOPTIM, $config);
+            $this->addProcessorsRequirements(ProcessorHelper::PNGQUANT, $config);
+        }
+    }
+
+    /**
+     * @param string $libraryName
+     * @param array $config
+     */
+    private function addProcessorsRequirements(string $libraryName, array $config): void
+    {
+        $library = null;
+        $recommendation = true;
+        $processorHelper = new ProcessorHelper(new ParameterBag($config));
+        [$libraryName, $version] = ProcessorVersionChecker::getLibraryInfo($libraryName);
+
+        try {
+            $library = $libraryName === ProcessorHelper::JPEGOPTIM
+                ? $processorHelper->getJPEGOptimLibrary()
+                : $processorHelper->getPNGQuantLibrary();
+        } catch (ProcessorsException $exception) {
+            $this->addOroRequirement(
+                null !== $library,
+                sprintf('Library `%s` is installed', $libraryName),
+                sprintf('Library `%s` not found or not executable.', $libraryName)
+            );
+            $recommendation = false;
+        } catch (ProcessorsVersionException $exception) {
+            $this->addOroRequirement(
+                null !== $library,
+                sprintf('Minimum required `%s` library version should be %s', $libraryName, $version),
+                sprintf('Minimum required `%s` library version should be %s', $libraryName, $version)
+            );
+            $library = $exception->getBinary();
+        }
+
+        if ($recommendation) {
+            $this->addRecommendation(
+                null !== $library,
+                sprintf('Library `%s` is installed', $libraryName),
+                sprintf('Library `%s` should be installed', $libraryName)
+            );
         }
     }
 
@@ -392,7 +421,6 @@ class OroRequirements extends SymfonyRequirements
             case 'k':
             case 'kb':
                 $val *= 1024;
-            // no break
         }
 
         return (float)$val;
@@ -476,6 +504,26 @@ class OroRequirements extends SymfonyRequirements
     }
 
     /**
+     * @param PDO $pdo
+     * @param array $requiredPrivileges
+     * @param array $config
+     * @return array
+     */
+    protected function getNotGrantedPrivileges(PDO $pdo, array $requiredPrivileges, array $config): array
+    {
+        if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'pgsql') {
+            $granted = DbPrivilegesProvider::getPostgresGrantedPrivileges($pdo, $config['database_name']);
+        } else {
+            $granted = DbPrivilegesProvider::getMySqlGrantedPrivileges($pdo, $config['database_name']);
+            if (in_array('ALL PRIVILEGES', $granted, true)) {
+                $granted = $requiredPrivileges;
+            }
+        }
+
+        return array_diff($requiredPrivileges, $granted);
+    }
+
+    /**
      * @param array $config
      * @return bool
      */
@@ -540,7 +588,7 @@ class YamlFileLoader extends Symfony\Component\Config\Loader\FileLoader
     {
         $path = $this->locator->locate($resource);
 
-        $content = Yaml::parse(file_get_contents($path));
+        $content = Yaml::parse(file_get_contents($path), Yaml::PARSE_CONSTANT | Yaml::PARSE_CUSTOM_TAGS);
 
         // empty file
         if (null === $content) {
